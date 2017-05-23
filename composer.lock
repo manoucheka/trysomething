@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3ff944fa0fd15c58b433c92e4f34bd9c",
-    "content-hash": "61b3dea39836c1bffd8cfe8d256c1f99",
+    "hash": "ecfc9fca3a9a4f5e33c3963c1c358c11",
+    "content-hash": "52e53a5d595708fd52d02cf6566a860b",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -425,7 +425,7 @@
         },
         {
             "name": "laravelcollective/html",
-            "version": "5.4.x-dev",
+            "version": "v5.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LaravelCollective/html.git",
@@ -3464,7 +3464,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "laravelcollective/html": 20,
         "zizaco/entrust": 20
     },
     "prefer-stable": false,
