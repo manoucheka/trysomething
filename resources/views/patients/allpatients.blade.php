@@ -1,23 +1,54 @@
 @extends('layouts.admin')
 
 @section('page')
- <h1>Patient Management</h1>
- <a href="{{url('patients/create')}}" class="btn btn-success">Create Patient</a>
- <hr>
- <table class="table table-striped table-bordered table-hover">
-     <thead>
-     <tr class="bg-info">
-         <th>First Name</th>
-         <th>Last Name</th>
-         <th>Creation Date</th>
-         <th>Photo</th>
-         
-   
-         <th colspan="3">Actions</th>
-     </tr>
-     </thead>
-     <tbody>
-     @foreach ($patients as $patient)
+    <header class="section-header">
+                <div class="tbl">
+                    <div class="tbl-row">
+                        <div class="tbl-cell">
+                            <h2>patients management</h2>
+                            
+                            <div class="subtitle">here you can create , update , read and edit patient</div>
+                        
+                          <a href="{{url('patients/create')}}" class="btn btn-success">Create Patient</a>
+                          
+                        </div>
+
+                    </div>
+                </div>
+            </header>
+            <section class="card">
+                <div class="card-block">
+                    <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th> FirstName</th>
+                            <th>lastname</th>
+                            <th>Creation Date</th>
+                            <th>Photo</th>
+                            <th>Actions</th>
+                            
+
+
+
+                        </tr>
+                        </thead>
+                        <tfoot>
+                        <tr>
+                            <th>FirstName</th>
+                            <th>Lastname</th>
+                            <th>Creation Date</th>
+                            <th>Photo</th>
+                            <th>Actions</th>
+                            
+                        </tr>
+                        </tfoot>
+                        
+
+
+
+                        <tbody>
+                        
+                        @foreach ($patients as $patient)
          <tr>
              <td>{{ $patient->firstname }}</td>
              <td>{{ $patient->lastname }}</td>
@@ -37,10 +68,18 @@
          </tr>
      @endforeach
 
-     </tbody>
 
- </table>
+                        </tbody>
+                    </table>
+                    
 
+<div class="pagination">
+       {!! $patients->links(); !!}
+
+ </div>
+
+                </div>
+            </section>
 
 
 

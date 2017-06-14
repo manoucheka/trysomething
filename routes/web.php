@@ -30,3 +30,27 @@ Route::resource('patients', 'PatientsController');
 
 
 /********* fin administration des patients ************/
+
+
+Route::get('/func', function () {
+    return MyFuncs::create_code("John","123455555");
+});
+
+
+ /** catalyst/sentinel or manage user ******************/
+
+  Route::get('admin/register', 'RegistrationController@register');
+
+Route::post('/register', 'RegistrationController@postRegister');
+
+Route::get('/login', 'LoginController@login');
+Route::post('/login', 'LoginController@postLogin');
+/******* end catalyst ********************************/
+
+
+
+/******** index ***************************/
+Route::get('/', 'HomeController@index');
+
+
+/********** fin index ********************/

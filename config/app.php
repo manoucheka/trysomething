@@ -163,11 +163,18 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        
+        Intervention\Image\ImageServiceProvider::class,
+
+        App\Providers\HelperServiceProvider::class,
+
 
         /*
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
+
 
             
 
@@ -237,6 +244,20 @@ return [
         'Form' => Collective\Html\FormFacade::class,
       'Html' => Collective\Html\HtmlFacade::class,
       'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+
+      'Input' => Illuminate\Support\Facades\Input::class,
+
+      'Image' => Intervention\Image\Facades\Image::class,
+
+      'MyFuncs' => App\Helpers\MyFuncs::class,
+
+
+      'Activation' => Cartalyst\Sentinel\Laravel\Facades\Activation::class,
+'Reminder'   => Cartalyst\Sentinel\Laravel\Facades\Reminder::class,
+'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
+
+
+
 
 
     ],

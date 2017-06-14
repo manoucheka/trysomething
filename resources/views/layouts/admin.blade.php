@@ -1,720 +1,1104 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hospital/Clinique/ Pharmacie | Dashboard</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="{{URL::asset('admin/bootstrap/css/bootstrap.min.css')}}"> 
-          
-    
-    <!-- Font Awesome -->
-	<link rel="stylesheet" href="{{URL::asset('admin/dist/css/font-awesome.min.css')}}">
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Hopital Pharmacy Clinic</title>
+
+	<link href="img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
+	<link href="img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
+	<link href="img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
+	<link href="img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
+	<link href="img/favicon.png" rel="icon" type="image/png">
+	<link href="img/favicon.ico" rel="shortcut icon">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+<!--<link rel="stylesheet" href="css/lib/lobipanel/lobipanel.min.css"> -->
+<link rel="stylesheet" href="{{URL::asset('admin/css/lib/lobipanel/lobipanel.min.css')}}">
+
+  <link rel="stylesheet" href="{{URL::asset('admin/css/separate/vendor/lobipanel.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('admin/css/lib/jqueryui/jquery-ui.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('admin/css/separate/pages/widgets.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('admin/css/lib/font-awesome/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('admin/css/lib/bootstrap/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('admin/css/main.css')}}">
+</head>
+<body class="with-side-menu control-panel control-panel-compact">
+
+	<header class="site-header">
+	    <div class="container-fluid">
+	        <a href="#" class="site-logo">
+	            <img class="hidden-md-down" src="img/logo-2.png" alt="">
+	            <img class="hidden-lg-up" src="img/logo-2-mob.png" alt="">
+	        </a>
+	
+	        <span id="show-hide-sidebar" class="checkbox-toggle">
+	            <input type="checkbox" id="show-hide-sidebar-toggle" checked>
+	            <label for="show-hide-sidebar-toggle"></label>
+	        </span>
+	
+	        <button class="hamburger hamburger--htla">
+	            <span>toggle menu</span>
+	        </button>
+	        
+	        <div class="site-header-content">
+	            <div class="site-header-content-in">
+	                <div class="site-header-shown">
+	                    <div class="dropdown dropdown-notification notif">
+	                        <a href="#"
+	                           class="header-alarm dropdown-toggle active"
+	                           id="dd-notification"
+	                           data-toggle="dropdown"
+	                           aria-haspopup="true"
+	                           aria-expanded="false">
+	                            <i class="font-icon-alarm"></i>
+	                        </a>
+	                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
+	                            <div class="dropdown-menu-notif-header">
+	                                Notifications
+	                                <span class="label label-pill label-danger">4</span>
+	                            </div>
+	                            <div class="dropdown-menu-notif-list">
+	                                <div class="dropdown-menu-notif-item">
+	                                    <div class="photo">
+	                                        <img src="img/photo-64-1.jpg" alt="">
+	                                    </div>
+	                                    <div class="dot"></div>
+	                                    <a href="#">Morgan</a> was bothering about something
+	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
+	                                </div>
+	                                <div class="dropdown-menu-notif-item">
+	                                    <div class="photo">
+	                                        <img src="img/photo-64-2.jpg" alt="">
+	                                    </div>
+	                                    <div class="dot"></div>
+	                                    <a href="#">Lioneli</a> had commented on this <a href="#">Super Important Thing</a>
+	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
+	                                </div>
+	                                <div class="dropdown-menu-notif-item">
+	                                    <div class="photo">
+	                                        <img src="img/photo-64-3.jpg" alt="">
+	                                    </div>
+	                                    <div class="dot"></div>
+	                                    <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
+	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
+	                                </div>
+	                                <div class="dropdown-menu-notif-item">
+	                                    <div class="photo">
+	                                        <img src="img/photo-64-4.jpg" alt="">
+	                                    </div>
+	                                    <a href="#">Lionely</a> wants to go to <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
+	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
+	                                </div>
+	                            </div>
+	                            <div class="dropdown-menu-notif-more">
+	                                <a href="#">See more</a>
+	                            </div>
+	                        </div>
+	                    </div>
+	
+	                    <div class="dropdown dropdown-notification messages">
+	                        <a href="#"
+	                           class="header-alarm dropdown-toggle active"
+	                           id="dd-messages"
+	                           data-toggle="dropdown"
+	                           aria-haspopup="true"
+	                           aria-expanded="false">
+	                            <i class="font-icon-mail"></i>
+	                        </a>
+	                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-messages" aria-labelledby="dd-messages">
+	                            <div class="dropdown-menu-messages-header">
+	                                <ul class="nav" role="tablist">
+	                                    <li class="nav-item">
+	                                        <a class="nav-link active"
+	                                           data-toggle="tab"
+	                                           href="#tab-incoming"
+	                                           role="tab">
+	                                            Inbox
+	                                            <span class="label label-pill label-danger">8</span>
+	                                        </a>
+	                                    </li>
+	                                    <li class="nav-item">
+	                                        <a class="nav-link"
+	                                           data-toggle="tab"
+	                                           href="#tab-outgoing"
+	                                           role="tab">Outbox</a>
+	                                    </li>
+	                                </ul>
+	                                <!--<button type="button" class="create">
+	                                    <i class="font-icon font-icon-pen-square"></i>
+	                                </button>-->
+	                            </div>
+	                            <div class="tab-content">
+	                                <div class="tab-pane active" id="tab-incoming" role="tabpanel">
+	                                    <div class="dropdown-menu-messages-list">
+	                                        <a href="#" class="mess-item">
+	                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
+	                                            <span class="mess-item-name">Tim Collins</span>
+	                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
+	                                        </a>
+	                                        <a href="#" class="mess-item">
+	                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
+	                                            <span class="mess-item-name">Christian Burton</span>
+	                                            <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something.</span>
+	                                        </a>
+	                                        <a href="#" class="mess-item">
+	                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
+	                                            <span class="mess-item-name">Tim Collins</span>
+	                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
+	                                        </a>
+	                                        <a href="#" class="mess-item">
+	                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
+	                                            <span class="mess-item-name">Christian Burton</span>
+	                                            <span class="mess-item-txt">Morgan was bothering about something...</span>
+	                                        </a>
+	                                    </div>
+	                                </div>
+	                                <div class="tab-pane" id="tab-outgoing" role="tabpanel">
+	                                    <div class="dropdown-menu-messages-list">
+	                                        <a href="#" class="mess-item">
+	                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
+	                                            <span class="mess-item-name">Christian Burton</span>
+	                                            <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something...</span>
+	                                        </a>
+	                                        <a href="#" class="mess-item">
+	                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
+	                                            <span class="mess-item-name">Tim Collins</span>
+	                                            <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something.</span>
+	                                        </a>
+	                                        <a href="#" class="mess-item">
+	                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
+	                                            <span class="mess-item-name">Christian Burtons</span>
+	                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
+	                                        </a>
+	                                        <a href="#" class="mess-item">
+	                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
+	                                            <span class="mess-item-name">Tim Collins</span>
+	                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
+	                                        </a>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="dropdown-menu-notif-more">
+	                                <a href="#">See more</a>
+	                            </div>
+	                        </div>
+	                    </div>
+	
+	                    <div class="dropdown dropdown-lang">
+	                        <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                            <span class="flag-icon flag-icon-us"></span>
+	                        </button>
+	                        <div class="dropdown-menu dropdown-menu-right">
+	                            <div class="dropdown-menu-col">
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-ru"></span>Русский</a>
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-de"></span>Deutsch</a>
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-it"></span>Italiano</a>
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-es"></span>Español</a>
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-pl"></span>Polski</a>
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-li"></span>Lietuviu</a>
+	                            </div>
+	                            <div class="dropdown-menu-col">
+	                                <a class="dropdown-item current" href="#"><span class="flag-icon flag-icon-us"></span>English</a>
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-fr"></span>Français</a>
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-by"></span>Беларускi</a>
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-ua"></span>Українська</a>
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-cz"></span>Česky</a>
+	                                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-ch"></span>中國</a>
+	                            </div>
+	                        </div>
+	                    </div>
+	
+	                    <div class="dropdown user-menu">
+	                        <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                            <img src="img/avatar-2-64.png" alt="">
+	                        </button>
+	                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
+	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Profile</a>
+	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Settings</a>
+	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Help</a>
+	                            <div class="dropdown-divider"></div>
+	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Logout</a>
+	                        </div>
+	                    </div>
+	
+	                    <button type="button" class="burger-right">
+	                        <i class="font-icon-menu-addl"></i>
+	                    </button>
+	                </div><!--.site-header-shown-->
+	
+	                <div class="mobile-menu-right-overlay"></div>
+	                <div class="site-header-collapsed">
+	                    <div class="site-header-collapsed-in">
+	                        <div class="dropdown dropdown-typical">
+	                            <div class="dropdown-menu" aria-labelledby="dd-header-sales">
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
+	                            </div>
+	                        </div>
+	                        <div class="dropdown dropdown-typical">
+	                            <a class="dropdown-toggle" id="dd-header-marketing" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                                <span class="font-icon font-icon-cogwheel"></span>
+	                                <span class="lbl">Marketing automation</span>
+	                            </a>
+	
+	                            <div class="dropdown-menu" aria-labelledby="dd-header-marketing">
+	                                <a class="dropdown-item" href="#">Current Search</a>
+	                                <a class="dropdown-item" href="#">Search for Issues</a>
+	                                <div class="dropdown-divider"></div>
+	                                <div class="dropdown-header">Recent issues</div>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
+	                                <div class="dropdown-more">
+	                                    <div class="dropdown-more-caption padding">more...</div>
+	                                    <div class="dropdown-more-sub">
+	                                        <div class="dropdown-more-sub-in">
+	                                            <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+	                                            <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
+	                                            <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
+	                                            <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
+	                                            <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                                <div class="dropdown-divider"></div>
+	                                <a class="dropdown-item" href="#">Import Issues from CSV</a>
+	                                <div class="dropdown-divider"></div>
+	                                <div class="dropdown-header">Filters</div>
+	                                <a class="dropdown-item" href="#">My Open Issues</a>
+	                                <a class="dropdown-item" href="#">Reported by Me</a>
+	                                <div class="dropdown-divider"></div>
+	                                <a class="dropdown-item" href="#">Manage filters</a>
+	                                <div class="dropdown-divider"></div>
+	                                <div class="dropdown-header">Timesheet</div>
+	                                <a class="dropdown-item" href="#">Subscribtions</a>
+	                            </div>
+	                        </div>
+	                        <div class="dropdown dropdown-typical">
+	                            <a class="dropdown-toggle" id="dd-header-social" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                                <span class="font-icon font-icon-share"></span>
+	                                <span class="lbl">Social media</span>
+	                            </a>
+	
+	                            <div class="dropdown-menu" aria-labelledby="dd-header-social">
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
+	                            </div>
+	                        </div>
+	                        <div class="dropdown dropdown-typical">
+	                            <a href="#" class="dropdown-toggle no-arr">
+	                                <span class="font-icon font-icon-page"></span>
+	                                <span class="lbl">Projects</span>
+	                                <span class="label label-pill label-danger">35</span>
+	                            </a>
+	                        </div>
+	
+	                        <div class="dropdown dropdown-typical">
+	                            <a class="dropdown-toggle" id="dd-header-form-builder" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                                <span class="font-icon font-icon-pencil"></span>
+	                                <span class="lbl">Form builder</span>
+	                            </a>
+	
+	                            <div class="dropdown-menu" aria-labelledby="dd-header-form-builder">
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
+	                            </div>
+	                        </div>
+	                        <div class="dropdown">
+	                            <button class="btn btn-rounded dropdown-toggle" id="dd-header-add" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                                Add
+	                            </button>
+	                            <div class="dropdown-menu" aria-labelledby="dd-header-add">
+	                                <a class="dropdown-item" href="#">Quant and Verbal</a>
+	                                <a class="dropdown-item" href="#">Real Gmat Test</a>
+	                                <a class="dropdown-item" href="#">Prep Official App</a>
+	                                <a class="dropdown-item" href="#">CATprer Test</a>
+	                                <a class="dropdown-item" href="#">Third Party Test</a>
+	                            </div>
+	                        </div>
+	                        <div class="help-dropdown">
+	                            <button type="button">
+	                                <i class="font-icon font-icon-help"></i>
+	                            </button>
+	                            <div class="help-dropdown-popup">
+	                                <div class="help-dropdown-popup-side">
+	                                    <ul>
+	                                        <li><a href="#">Getting Started</a></li>
+	                                        <li><a href="#" class="active">Creating a new project</a></li>
+	                                        <li><a href="#">Adding customers</a></li>
+	                                        <li><a href="#">Settings</a></li>
+	                                        <li><a href="#">Importing data</a></li>
+	                                        <li><a href="#">Exporting data</a></li>
+	                                    </ul>
+	                                </div>
+	                                <div class="help-dropdown-popup-cont">
+	                                    <div class="help-dropdown-popup-cont-in">
+	                                        <div class="jscroll">
+	                                            <a href="#" class="help-dropdown-popup-item">
+	                                                Lorem Ipsum is simply
+	                                                <span class="describe">Lorem Ipsum has been the industry's standard dummy text </span>
+	                                            </a>
+	                                            <a href="#" class="help-dropdown-popup-item">
+	                                                Contrary to popular belief
+	                                                <span class="describe">Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</span>
+	                                            </a>
+	                                            <a href="#" class="help-dropdown-popup-item">
+	                                                The point of using Lorem Ipsum
+	                                                <span class="describe">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</span>
+	                                            </a>
+	                                            <a href="#" class="help-dropdown-popup-item">
+	                                                Lorem Ipsum
+	                                                <span class="describe">There are many variations of passages of Lorem Ipsum available</span>
+	                                            </a>
+	                                            <a href="#" class="help-dropdown-popup-item">
+	                                                Lorem Ipsum is simply
+	                                                <span class="describe">Lorem Ipsum has been the industry's standard dummy text </span>
+	                                            </a>
+	                                            <a href="#" class="help-dropdown-popup-item">
+	                                                Contrary to popular belief
+	                                                <span class="describe">Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</span>
+	                                            </a>
+	                                            <a href="#" class="help-dropdown-popup-item">
+	                                                The point of using Lorem Ipsum
+	                                                <span class="describe">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</span>
+	                                            </a>
+	                                            <a href="#" class="help-dropdown-popup-item">
+	                                                Lorem Ipsum
+	                                                <span class="describe">There are many variations of passages of Lorem Ipsum available</span>
+	                                            </a>
+	                                            <a href="#" class="help-dropdown-popup-item">
+	                                                Lorem Ipsum is simply
+	                                                <span class="describe">Lorem Ipsum has been the industry's standard dummy text </span>
+	                                            </a>
+	                                            <a href="#" class="help-dropdown-popup-item">
+	                                                Contrary to popular belief
+	                                                <span class="describe">Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</span>
+	                                            </a>
+	                                            <a href="#" class="help-dropdown-popup-item">
+	                                                The point of using Lorem Ipsum
+	                                                <span class="describe">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text</span>
+	                                            </a>
+	                                            <a href="#" class="help-dropdown-popup-item">
+	                                                Lorem Ipsum
+	                                                <span class="describe">There are many variations of passages of Lorem Ipsum available</span>
+	                                            </a>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                        </div><!--.help-dropdown-->
+	                        <a class="btn btn-nav btn-rounded btn-inline btn-danger-outline" href="http://themeforest.net/item/startui-premium-bootstrap-4-admin-dashboard-template/15228250">
+	                            Buy Theme
+	                        </a>
+	                        <div class="site-header-search-container">
+	                            <form class="site-header-search closed">
+	                                <input type="text" placeholder="Search"/>
+	                                <button type="submit">
+	                                    <span class="font-icon-search"></span>
+	                                </button>
+	                                <div class="overlay"></div>
+	                            </form>
+	                        </div>
+	                    </div><!--.site-header-collapsed-in-->
+	                </div><!--.site-header-collapsed-->
+	            </div><!--site-header-content-in-->
+	        </div><!--.site-header-content-->
+	    </div><!--.container-fluid-->
+	</header><!--.site-header-->
+
+
+
+
+
+
+
+	<div class="mobile-menu-left-overlay"></div>
+	<nav class="side-menu">
+	    <ul class="side-menu-list">
+	        <li class="grey with-sub">
+	            <span>
+	                <i class="font-icon font-icon-dashboard"></i>
+	                <span class="lbl">Dashboard</span>
+	            </span>
+	            <ul>
+	                <li><a href="index.html"><span class="lbl">Default</span><span class="label label-custom label-pill label-danger">new</span></a></li>
+	                <li><a href="dashboard-top-menu.html"><span class="lbl">Top menu</span></a></li>
+	                <li><a href="side-menu-compact-full.html"><span class="lbl">Compact menu</span></a></li>
+	                <li><a href="dashboard-addl-menu.html"><span class="lbl">Submenu</span></a></li>
+	                <li><a href="side-menu-avatar.html"><span class="lbl">Menu with avatar</span></a></li>
+	                <li><a href="side-menu-avatar.html"><span class="lbl">Compact menu with avatar</span></a></li>
+	                <li><a href="dark-menu.html"><span class="lbl">Dark menu</span></a></li>
+	                <li><a href="dark-menu-blue.html"><span class="lbl">Blue dark menu</span></a></li>
+	                <li><a href="dark-menu-green.html"><span class="lbl">Green dark menu</span></a></li>
+	                <li><a href="dark-menu-green-compact.html"><span class="lbl">Green compact dark menu</span></a></li>
+	                <li><a href="dark-menu-ultramarine.html"><span class="lbl">Ultramarine dark menu</span></a></li>
+	                <li><a href="asphalt-menu.html"><span class="lbl">Asphalt top menu</span></a></li>
+	                <li><a href="side-menu-big-icon.html"><span class="lbl">Big menu</span></a></li>
+	            </ul>
+	        </li>
+	        <li class="brown with-sub">
+	            <span>
+	                <i class="font-icon glyphicon glyphicon-tint"></i>
+	                <span class="lbl">Skins</span>
+	            </span>
+	            <ul>
+	                <li><a href="theme-side-ebony-clay.html"><span class="lbl">Ebony Clay</span></a></li>
+	                <li><a href="theme-side-madison-caribbean.html"><span class="lbl">Madison Caribbean</span></a></li>
+	                <li><a href="theme-side-caesium-dark-caribbean.html"><span class="lbl">Caesium Dark Caribbean</span></a></li>
+	                <li><a href="theme-side-tin.html"><span class="lbl">Tin</span></a></li>
+	                <li><a href="theme-side-litmus-blue.html"><span class="lbl">Litmus Blue</span></a></li>
+	                <li><a href="theme-rebecca-purple.html"><span class="lbl">Rebecca Purple</span></a></li>
+	                <li><a href="theme-picton-blue.html"><span class="lbl">Picton Blue</span></a></li>
+	                <li><a href="theme-picton-blue-white-ebony.html"><span class="lbl">Picton Blue White Ebony</span></a></li>
+	            </ul>
+	        </li>
+	        <li class="purple with-sub">
+	            <span>
+	                <i class="font-icon font-icon-comments active"></i>
+	                <span class="lbl">Messages</span>
+	            </span>
+	            <ul>
+	                <li><a href="messenger.html"><span class="lbl">Messenger</span></a></li>
+	                <li><a href="chat.html"><span class="lbl">Messages</span><span class="label label-custom label-pill label-danger">8</span></a></li>
+	                <li><a href="chat-write.html"><span class="lbl">Write Message</span></a></li>
+	                <li><a href="chat-index.html"><span class="lbl">Select User</span></a></li>
+	            </ul>
+	        </li>
+	        <li class="red">
+	            <a href="mail.html">
+	                <i class="font-icon glyphicon glyphicon-send"></i>
+	                <span class="lbl">Mail</span>
+	            </a>
+	        </li>
+	        <li class="gold with-sub">
+	            <span>
+	                <i class="font-icon font-icon-edit"></i>
+	                <span class="lbl">Forms</span>
+	            </span>
+	            <ul>
+	                <li><a href="ui-form.html"><span class="lbl">Basic Inputs</span></a></li>
+	                <li><a href="ui-buttons.html"><span class="lbl">Buttons</span></a></li>
+	                <li><a href="ui-select.html"><span class="lbl">Select &amp; Tags</span></a></li>
+	                <li><a href="ui-checkboxes.html"><span class="lbl">Checkboxes &amp; Radios</span></a></li>
+	                <li><a href="ui-form-validation.html"><span class="lbl">Validation</span></a></li>
+	                <li><a href="typeahead.html"><span class="lbl">Typeahead</span></a></li>
+	                <li><a href="steps.html"><span class="lbl">Steps</span></a></li>
+	                <li><a href="ui-form-input-mask.html"><span class="lbl">Input Mask</span></a></li>
+	                <li><a href="ui-form-extras.html"><span class="lbl">Extras</span></a></li>
+	            </ul>
+	        </li>
+	        <li class="blue-dirty">
+	            <a href="tables.html">
+	                <span class="glyphicon glyphicon-th"></span>
+	                <span class="lbl">Tables</span>
+	            </a>
+	        </li>
+	        <li class="magenta with-sub">
+	            <span>
+	                <span class="glyphicon glyphicon-list-alt"></span>
+	                <span class="lbl">Datatables</span>
+	            </span>
+	            <ul>
+	                <a href="datatables-net.html"><span class="lbl">Datatables.net</span></a></li>
+	                <a href="bootstrap-datatables.html"><span class="lbl">Bootstrap Table</span></a></li>
+	
+	                <!--<li><a href="datatables.html"><span class="lbl">Default</span></a></li>
+	                <li><a href="datatables-fixed-columns.html"><span class="lbl">Fixed Columns</span></a></li>
+	                <li><a href="datatables-reorder-rows.html"><span class="lbl">Reorder Rows</span></a></li>
+	                <li><a href="datatables-reorder-columns.html"><span class="lbl">Reorder Columns</span></a></li>
+	                <li><a href="datatables-resize-columns.html"><span class="lbl">Resize Columns</span></a></li>
+	                <li><a href="datatables-mobile.html"><span class="lbl">Mobile</span></a></li>
+	                <li><a href="datatables-filter-control.html"><span class="lbl">Filters</span></a></li>-->
+	            </ul>
+	        </li>
+	        <li class="green with-sub">
+	            <span>
+	                <i class="font-icon font-icon-widget"></i>
+	                <span class="lbl">Components</span>
+	            </span>
+	            <ul>
+	                <li><a href="widgets.html"><span class="lbl">Widgets</span></a></li>
+	                <li><a href="elements.html"><span class="lbl">Bootstrap UI</span></a></li>
+	                <li><a href="ui-datepicker.html"><span class="lbl">Date and Time Pickers</span></a></li>
+	                <li><a href="multipicker.html"><span class="lbl">Multi Picker</span></a></li>
+	                <li><a href="form-steps.html"><span class="lbl">Form Steps</span></a></li>
+	                <li><a href="components-upload.html"><span class="lbl">Upload</span></a></li>
+	                <li><a href="sweet-alerts.html"><span class="lbl">SweetAlert</span></a></li>
+	                <li><a href="tabs.html"><span class="lbl">Tabs</span></a></li>
+	                <li><a href="panels.html"><span class="lbl">Panels</span></a></li>
+	                <li><a href="notifications.html"><span class="lbl">Notifications</span></a></li>
+	                <li><a href="range-slider.html"><span class="lbl">Sliders</span></a></li>
+	                <li><a href="editor-summernote.html"><span class="lbl">Editors</span></a></li>
+	                <li><a href="nestable.html"><span class="lbl">Nestable</span></a></li>
+	                <li><a href="blockui.html"><span class="lbl">BlockUI</span></a></li>
+	                <li><a href="alerts.html"><span class="lbl">Alerts</span></a></li>
+	                <li><a href="player.html"><span class="lbl">Players</span></a></li>
+	            </ul>
+	        </li>
+	     <!--   <li class="gold">
+	            <a href="#">
+	                <i class="font-icon font-icon-speed"></i>
+	                <span class="lbl">Performance</span>
+	            </a>
+	        </li>-->
+	        <li class="pink-red">
+	            <a href="activity.html">
+	                <i class="font-icon font-icon-zigzag"></i>
+	                <span class="lbl">Activity</span>
+	            </a>
+	        </li>
+	        <li class="blue with-sub">
+	            <span>
+	                <i class="font-icon font-icon-user"></i>
+	                <span class="lbl">Profile</span>
+	            </span>
+	            <ul>
+	                <li><a href="profile.html"><span class="lbl">Version 1</span></a></li>
+	                <li><a href="profile-2.html"><span class="lbl">Version 2</span></a></li>
+	            </ul>
+	        </li>
+	        <li class="orange-red with-sub">
+	            <span>
+	                <i class="font-icon font-icon-help"></i>
+	                <span class="lbl">Support</span>
+	            </span>
+	            <ul>
+	                <li><a href="documentation.html"><span class="lbl">Docs (example)</span></a></li>
+	                <li><a href="faq.html"><span class="lbl">FAQ Simple</span></a></li>
+	                <li><a href="faq-search.html"><span class="lbl">FAQ Search</span></a></li>
+	            </ul>
+	        </li>
+	        <li class="red">
+	            <a href="contacts.html" class="label-right">
+	                <i class="font-icon font-icon-contacts"></i>
+	                <span class="lbl">Contacts</span>
+	                <span class="label label-custom label-pill label-danger">35</span>
+	            </a>
+	        </li>
+	        <li class="magenta opened">
+	            <a href="scheduler.html">
+	                <i class="font-icon font-icon-calend"></i>
+	                <span class="lbl">Calendar</span>
+	            </a>
+	        </li>
+	        <li class="grey with-sub">
+	            <span>
+	                <span class="glyphicon glyphicon-duplicate"></span>
+	                <span class="lbl">Pages</span>
+	            </span>
+	            <ul>
+	                <li><a href="email_templates.html"><span class="lbl">Email Templates</span></a></li>
+	                <li><a href="blank.html"><span class="lbl">Blank</span></a></li>
+	                <li><a href="empty.html"><span class="lbl">Empty List</span></a></li>
+	                <li><a href="prices.html"><span class="lbl">Prices</span></a></li>
+	                <li><a href="typography.html"><span class="lbl">Typography</span></a></li>
+	                <li><a href="sign-in.html"><span class="lbl">Login</span></a></li>
+	                <li><a href="sign-up.html"><span class="lbl">Register</span></a></li>
+	                <li><a href="reset-password.html"><span class="lbl">Reset Password</span></a></li>
+	                <li><a href="new-password.html"><span class="lbl">New Password</span></a></li>
+	                <li><a href="error-404.html"><span class="lbl">Error 404</span></a></li>
+	                <li><a href="error-500.html"><span class="lbl">Error 500</span></a></li>
+	                <li><a href="cards.html"><span class="lbl">Cards</span></a></li>
+	                <li><a href="avatars.html"><span class="lbl">Avatars</span></a></li>
+	                <li><a href="ribbons.html"><span class="lbl">Ribbons</span></a></li>
+	                <li><a href="icons-startui.html"><span class="lbl">Icons</span></a></li>
+	                <li><a href="invoice.html"><span class="lbl">Invoice</span></a></li>
+	                <li><a href="helpers.html"><span class="lbl">Helpers</span></a></li>
+	            </ul>
+	        </li>
+	        <li class="blue-dirty">
+	            <a href="list-tasks.html">
+	                <i class="font-icon font-icon-notebook"></i>
+	                <span class="lbl">Tasks</span>
+	            </a>
+	        </li>
+	        <li class="aquamarine">
+	            <a href="contacts-page.html">
+	                <i class="font-icon font-icon-mail"></i>
+	                <span class="lbl">Contact form</span>
+	            </a>
+	        </li>
+	        <li class="blue">
+	            <a href="files.html">
+	                <i class="font-icon glyphicon glyphicon-paperclip"></i>
+	                <span class="lbl">File Manager</span>
+	            </a>
+	        </li>
+	        <li class="gold">
+	            <a href="gallery.html">
+	                <i class="font-icon font-icon-picture-2"></i>
+	                <span class="lbl">Gallery</span>
+	            </a>
+	        </li>
+	        <li class="red">
+	            <a href="project.html">
+	                <i class="font-icon font-icon-case-2"></i>
+	                <span class="lbl">Project</span>
+	            </a>
+	        </li>
+	        <li class="brown with-sub">
+	            <span>
+	                <span class="font-icon font-icon-chart"></span>
+	                <span class="lbl">Charts</span>
+	            </span>
+	            <ul>
+	                <li><a href="charts-c3js.html"><span class="lbl">C3.js</span></a></li>
+	                <li><a href="charts-peity.html"><span class="lbl">Peity</span></a></li>
+	                <li><a href="charts-plottable.html"><span class="lbl">Plottable.js</span></a></li>
+	            </ul>
+	        </li>
+	        <li class="grey with-sub">
+	            <span>
+	                <span class="font-icon font-icon-burger"></span>
+	                <span class="lbl">Nested Menu</span>
+	            </span>
+	            <ul>
+	                <li><a href="#"><span class="lbl">Level 1</span></a></li>
+	                <li><a href="#"><span class="lbl">Level 1</span></a></li>
+	                <li class="with-sub">
+	                    <span>
+	                        <span class="lbl">Level 2</span>
+	                    </span>
+	                    <ul>
+	                        <li><a href="#"><span class="lbl">Level 2</span></a></li>
+	                        <li><a href="#"><span class="lbl">Level 2</span></a></li>
+	                        <li class="with-sub">
+	                            <span>
+	                                <span class="lbl">Level 3</span>
+	                            </span>
+	                            <ul>
+	                                <li><a href="#"><span class="lbl">Level 3</span></a></li>
+	                                <li><a href="#"><span class="lbl">Level 3</span></a></li>
+	                            </ul>
+	                        </li>
+	                    </ul>
+	                </li>
+	            </ul>
+	        </li>
+	    </ul>
+	
+	    <section>
+	        <header class="side-menu-title">Tags</header>
+	        <ul class="side-menu-list">
+	            <li>
+	                <a href="#">
+	                    <i class="tag-color green"></i>
+	                    <span class="lbl">Website</span>
+	                </a>
+	            </li>
+	            <li>
+	                <a href="#">
+	                    <i class="tag-color grey-blue"></i>
+	                    <span class="lbl">Bugs/Errors</span>
+	                </a>
+	            </li>
+	            <li>
+	                <a href="#">
+	                    <i class="tag-color red"></i>
+	                    <span class="lbl">General Problem</span>
+	                </a>
+	            </li>
+	            <li>
+	                <a href="#">
+	                    <i class="tag-color pink"></i>
+	                    <span class="lbl">Questions</span>
+	                </a>
+	            </li>
+	            <li>
+	                <a href="#">
+	                    <i class="tag-color orange"></i>
+	                    <span class="lbl">Ideas</span>
+	                </a>
+	            </li>
+	        </ul>
+	    </section>
+	</nav><!--.side-menu-->
+
+	
+
+
+  <!--
+
+	<div class="page-content">
+	    <div class="container-fluid">
+	        <div class="row">
+	            <div class="col-xl-6">
+	                <div class="chart-statistic-box">
+	                    <div class="chart-txt">
+	                        <div class="chart-txt-top">
+	                            <p><span class="unit">$</span><span class="number">1540</span></p>
+	                            <p class="caption">Week income</p>
+	                        </div>
+	                        <table class="tbl-data">
+	                            <tr>
+	                                <td class="price color-purple">120$</td>
+	                                <td>Orders</td>
+	                            </tr>
+	                            <tr>
+	                                <td class="price color-yellow">15$</td>
+	                                <td>Investments</td>
+	                            </tr>
+	                            <tr>
+	                                <td class="price color-lime">55$</td>
+	                                <td>Others</td>
+	                            </tr>
+	                        </table>
+	                    </div>
+	                    <div class="chart-container">
+	                        <div class="chart-container-in">
+	                            <div id="chart_div"></div>
+	                            <header class="chart-container-title">Income</header>
+	                            <div class="chart-container-x">
+	                                <div class="item"></div>
+	                                <div class="item">tue</div>
+	                                <div class="item">wed</div>
+	                                <div class="item">thu</div>
+	                                <div class="item">fri</div>
+	                                <div class="item">sat</div>
+	                                <div class="item">sun</div>
+	                                <div class="item">mon</div>
+	                                <div class="item"></div>
+	                            </div>
+	                            <div class="chart-container-y">
+	                                <div class="item">300</div>
+	                                <div class="item"></div>
+	                                <div class="item">250</div>
+	                                <div class="item"></div>
+	                                <div class="item">200</div>
+	                                <div class="item"></div>
+	                                <div class="item">150</div>
+	                                <div class="item"></div>
+	                                <div class="item">100</div>
+	                                <div class="item"></div>
+	                                <div class="item">50</div>
+	                                <div class="item"></div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-xl-6">
+	                <div class="row">
+	                    <div class="col-sm-6">
+	                        <article class="statistic-box red">
+	                            <div>
+	                                <div class="number">26</div>
+	                                <div class="caption"><div>Open tickets</div></div>
+	                                <div class="percent">
+	                                    <div class="arrow up"></div>
+	                                    <p>15%</p>
+	                                </div>
+	                            </div>
+	                        </article>
+	                    </div>
+	                    <div class="col-sm-6">
+	                        <article class="statistic-box purple">
+	                            <div>
+	                                <div class="number">12</div>
+	                                <div class="caption"><div>Closes tickets</div></div>
+	                                <div class="percent">
+	                                    <div class="arrow down"></div>
+	                                    <p>11%</p>
+	                                </div>
+	                            </div>
+	                        </article>
+	                    </div>
+	                    <div class="col-sm-6">
+	                        <article class="statistic-box yellow">
+	                            <div>
+	                                <div class="number">104</div>
+	                                <div class="caption"><div>New clients</div></div>
+	                                <div class="percent">
+	                                    <div class="arrow down"></div>
+	                                    <p>5%</p>
+	                                </div>
+	                            </div>
+	                        </article>
+	                    </div>
+	                    <div class="col-sm-6">
+	                        <article class="statistic-box green">
+	                            <div>
+	                                <div class="number">29</div>
+	                                <div class="caption"><div>Here is an example of a long name</div></div>
+	                                <div class="percent">
+	                                    <div class="arrow up"></div>
+	                                    <p>84%</p>
+	                                </div>
+	                            </div>
+	                        </article>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	
+	-->
+	        
+
+<div class="page-content">
+      <div class="container-fluid">
   
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <!-- Ionicons -->
-	<link rel="stylesheet" href="{{URL::asset('admin/dist/css/ionicons.min.css')}}"> 
-  
-  
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{URL::asset('admin/dist/css/AdminLTE.min.css')}}">
-    
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
-   <link rel="stylesheet" href="{{URL::asset('admin/dist/css/skins/_all-skins.min.css')}}">
-   
-    <!-- iCheck -->
-   <link rel="stylesheet" href="{{URL::asset('admin/plugins/iCheck/flat/blue.css')}}"> 
-    
-    <!-- Morris chart -->
-    <link rel="stylesheet" href="admin/plugins/morris/morris.css">
-     
-    <!-- jvectormap -->
-   <link rel="stylesheet" href="{{URL::asset('plugins/jvectormap/jquery-jvectormap-1.2.2.css') }}">
-     
-    <!-- Date Picker -->
-    <link rel="stylesheet" href="{{URL::asset('admin/plugins/datepicker/datepicker3.css')}}">
-    
-    <!-- Daterange picker -->
-    <link rel="stylesheet" href="{{URL::asset('admin/plugins/daterangepicker/daterangepicker-bs3.css')}}">
-    
-    <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="{{URL::asset('admin/plugins/daterangepicker/daterangepicker-bs3.css')}}">
-    
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body class="hold-transition skin-blue sidebar-mini">
-    <div class="wrapper">
-
-      <header class="main-header">
-        <!-- Logo -->
-        <a href="/" class="logo">
-          <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>A</b>LT</span>
-          <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Hopital</b></span>
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-          <!-- Sidebar toggle button-->
-          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Toggle navigation</span>
-          </a>
-          <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-              <!-- Messages: style can be found in dropdown.less-->
-              <li class="dropdown messages-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-envelope-o"></i>
-                  <span class="label label-success">4</span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li class="header">You have 4 messages</li>
-                  <li>
-                    <!-- inner menu: contains the actual data -->
-                    <ul class="menu">
-                      <li><!-- start message -->
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                          </div>
-                          <h4>
-                            Support Team
-                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                          </h4>
-                          <p>Why not buy a new awesome theme?</p>
-                        </a>
-                      </li><!-- end message -->
-                      <li>
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                          </div>
-                          <h4>
-                            AdminLTE Design Team
-                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                          </h4>
-                          <p>Why not buy a new awesome theme?</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                          </div>
-                          <h4>
-                            Developers
-                            <small><i class="fa fa-clock-o"></i> Today</small>
-                          </h4>
-                          <p>Why not buy a new awesome theme?</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                          </div>
-                          <h4>
-                            Sales Department
-                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                          </h4>
-                          <p>Why not buy a new awesome theme?</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                          </div>
-                          <h4>
-                            Reviewers
-                            <small><i class="fa fa-clock-o"></i> 2 days</small>
-                          </h4>
-                          <p>Why not buy a new awesome theme?</p>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="footer"><a href="#">See All Messages</a></li>
-                </ul>
-              </li>
-              <!-- Notifications: style can be found in dropdown.less -->
-              <li class="dropdown notifications-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-bell-o"></i>
-                  <span class="label label-warning">10</span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li class="header">You have 10 notifications</li>
-                  <li>
-                    <!-- inner menu: contains the actual data -->
-                    <ul class="menu">
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the page and may cause design problems
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-users text-red"></i> 5 new members joined
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i class="fa fa-user text-red"></i> You changed your username
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="footer"><a href="#">View all</a></li>
-                </ul>
-              </li>
-              <!-- Tasks: style can be found in dropdown.less -->
-              <li class="dropdown tasks-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-flag-o"></i>
-                  <span class="label label-danger">9</span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li class="header">You have 9 tasks</li>
-                  <li>
-                    <!-- inner menu: contains the actual data -->
-                    <ul class="menu">
-                      <li><!-- Task item -->
-                        <a href="#">
-                          <h3>
-                            Design some buttons
-                            <small class="pull-right">20%</small>
-                          </h3>
-                          <div class="progress xs">
-                            <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                              <span class="sr-only">20% Complete</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li><!-- end task item -->
-                      <li><!-- Task item -->
-                        <a href="#">
-                          <h3>
-                            Create a nice theme
-                            <small class="pull-right">40%</small>
-                          </h3>
-                          <div class="progress xs">
-                            <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                              <span class="sr-only">40% Complete</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li><!-- end task item -->
-                      <li><!-- Task item -->
-                        <a href="#">
-                          <h3>
-                            Some task I need to do
-                            <small class="pull-right">60%</small>
-                          </h3>
-                          <div class="progress xs">
-                            <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                              <span class="sr-only">60% Complete</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li><!-- end task item -->
-                      <li><!-- Task item -->
-                        <a href="#">
-                          <h3>
-                            Make beautiful transitions
-                            <small class="pull-right">80%</small>
-                          </h3>
-                          <div class="progress xs">
-                            <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                              <span class="sr-only">80% Complete</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li><!-- end task item -->
-                    </ul>
-                  </li>
-                  <li class="footer">
-                    <a href="#">View all tasks</a>
-                  </li>
-                </ul>
-              </li>
-              <!-- User Account: style can be found in dropdown.less -->
-              <li class="dropdown user user-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                  <span class="hidden-xs">Jean Bernard MARCELLUS</span>
-                </a>
-                <ul class="dropdown-menu">
-                  <!-- User image -->
-                  <li class="user-header">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                    <p>
-                      Jean Bernard MARCELLUS - Web Developer
-                      <small>Member since Nov. 2012</small>
-                    </p>
-                  </li>
-                  <!-- Menu Body -->
-                  <li class="user-body">
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Followers</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Sales</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Friends</a>
-                    </div>
-                  </li>
-                  <!-- Menu Footer-->
-                  <li class="user-footer">
-                    <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
-                    </div>
-                    <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <!-- Control Sidebar Toggle Button -->
-              <li>
-                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-          <!-- Sidebar user panel -->
-          <div class="user-panel">
-            <div class="pull-left image">
-              <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-            </div>
-            <div class="pull-left info">
-              <p>Jean Bernard MARCELLUS</p>
-              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-            </div>
-          </div>
-          <!-- search form -->
-          <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-              </span>
-            </div>
-          </form>
-          <!-- /.search form -->
-          <!-- sidebar menu: : style can be found in sidebar.less -->
-          <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION FOR HOSPITAL</li>
-            <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-                <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-files-o"></i>
-                <span>Layout Options</span>
-                <span class="label label-primary pull-right">4</span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-                <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-                <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-                <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="pages/widgets.html">
-                <i class="fa fa-th"></i> <span>Widgets</span> <small class="label pull-right bg-green">new</small>
-              </a>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-pie-chart"></i>
-                <span>  Patients </span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> MANAGEMENT</a></li>
-                
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-laptop"></i>
-                <span>UI Elements</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-                <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-                <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-                <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-                <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-                <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-edit"></i> <span>Forms</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-                <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-table"></i> <span>Tables</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-                <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="pages/calendar.html">
-                <i class="fa fa-calendar"></i> <span>Calendar</span>
-                <small class="label pull-right bg-red">3</small>
-              </a>
-            </li>
-            <li>
-              <a href="pages/mailbox/mailbox.html">
-                <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                <small class="label pull-right bg-yellow">12</small>
-              </a>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-folder"></i> <span>Examples</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-                <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-                <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-                <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-                <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-                <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-                <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-                <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-              </ul>
-            </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-share"></i> <span>Multilevel</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-                <li>
-                  <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i></a>
-                  <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
-                    <li>
-                      <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
-                      <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-              </ul>
-            </li>
-            <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-            <li class="header">LABELS</li>
-            <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
-          </ul>
-        </section>
-        <!-- /.sidebar -->
-      </aside>
-
-      <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <h1>
-            Dashboard
-            <small>Control panel</small>
-          </h1>
-          <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
-          </ol>
-        </section>
-
-        
-
-    @yield('page')
 
 
 
-      </div><!-- /.content-wrapper -->
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Version</b> 2.3.0
-        </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
-      </footer>
+             @yield('page')
 
-      <!-- Control Sidebar -->
-      <aside class="control-sidebar control-sidebar-dark">
-        <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-          <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-          <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <!-- Home tab content -->
-          <div class="tab-pane" id="control-sidebar-home-tab">
-            <h3 class="control-sidebar-heading">Recent Activity</h3>
-            <ul class="control-sidebar-menu">
-              <li>
-                <a href="javascript::;">
-                  <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-                  <div class="menu-info">
-                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-                    <p>Will be 23 on April 24th</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript::;">
-                  <i class="menu-icon fa fa-user bg-yellow"></i>
-                  <div class="menu-info">
-                    <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-                    <p>New phone +1(800)555-1234</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript::;">
-                  <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-                  <div class="menu-info">
-                    <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-                    <p>nora@example.com</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript::;">
-                  <i class="menu-icon fa fa-file-code-o bg-green"></i>
-                  <div class="menu-info">
-                    <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-                    <p>Execution time 5 seconds</p>
-                  </div>
-                </a>
-              </li>
-            </ul><!-- /.control-sidebar-menu -->
+     </div>
 
-            <h3 class="control-sidebar-heading">Tasks Progress</h3>
-            <ul class="control-sidebar-menu">
-              <li>
-                <a href="javascript::;">
-                  <h4 class="control-sidebar-subheading">
-                    Custom Template Design
-                    <span class="label label-danger pull-right">70%</span>
-                  </h4>
-                  <div class="progress progress-xxs">
-                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript::;">
-                  <h4 class="control-sidebar-subheading">
-                    Update Resume
-                    <span class="label label-success pull-right">95%</span>
-                  </h4>
-                  <div class="progress progress-xxs">
-                    <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript::;">
-                  <h4 class="control-sidebar-subheading">
-                    Laravel Integration
-                    <span class="label label-warning pull-right">50%</span>
-                  </h4>
-                  <div class="progress progress-xxs">
-                    <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript::;">
-                  <h4 class="control-sidebar-subheading">
-                    Back End Framework
-                    <span class="label label-primary pull-right">68%</span>
-                  </h4>
-                  <div class="progress progress-xxs">
-                    <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-                  </div>
-                </a>
-              </li>
-            </ul><!-- /.control-sidebar-menu -->
+</div>
 
-          </div><!-- /.tab-pane -->
-          <!-- Stats tab content -->
-          <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
-          <!-- Settings tab content -->
-          <div class="tab-pane" id="control-sidebar-settings-tab">
-            <form method="post">
-              <h3 class="control-sidebar-heading">General Settings</h3>
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Report panel usage
-                  <input type="checkbox" class="pull-right" checked>
-                </label>
-                <p>
-                  Some information about this general settings option
-                </p>
-              </div><!-- /.form-group -->
 
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Allow mail redirect
-                  <input type="checkbox" class="pull-right" checked>
-                </label>
-                <p>
-                  Other sets of options are available
-                </p>
-              </div><!-- /.form-group -->
+	<div class="control-panel-container">
+	    <ul>
+	        <li class="tasks">
+	            <div class="control-item-header">
+	                <a href="#" class="icon-toggle">
+	                    <span class="caret-down fa fa-caret-down"></span>
+	                    <span class="icon fa fa-tasks"></span>
+	                </a>
+	                <span class="text">Task list</span>
+	                <div class="actions">
+	                    <a href="#">
+	                        <span class="fa fa-refresh"></span>
+	                    </a>
+	                    <a href="#">
+	                        <span class="fa fa-cog"></span>
+	                    </a>
+	                    <a href="#">
+	                        <span class="fa fa-trash"></span>
+	                    </a>
+	                </div>
+	            </div>
+	            <div class="control-item-content">
+	                <div class="control-item-content-text">You don't have pending tasks.</div>
+	            </div>
+	        </li>
+	        <li class="sticky-note">
+	            <div class="control-item-header">
+	                <a href="#" class="icon-toggle">
+	                    <span class="caret-down fa fa-caret-down"></span>
+	                    <span class="icon fa fa-file"></span>
+	                </a>
+	                <span class="text">Sticky Note</span>
+	                <div class="actions">
+	                    <a href="#">
+	                        <span class="fa fa-refresh"></span>
+	                    </a>
+	                    <a href="#">
+	                        <span class="fa fa-cog"></span>
+	                    </a>
+	                    <a href="#">
+	                        <span class="fa fa-trash"></span>
+	                    </a>
+	                </div>
+	            </div>
+	            <div class="control-item-content">
+	                <div class="control-item-content-text">
+	                    StartUI – a full featured, premium web application admin dashboard built with Twitter Bootstrap 4, JQuery and CSS
+	                </div>
+	            </div>
+	        </li>
+	        <li class="emails">
+	            <div class="control-item-header">
+	                <a href="#" class="icon-toggle">
+	                    <span class="caret-down fa fa-caret-down"></span>
+	                    <span class="icon fa fa-envelope"></span>
+	                </a>
+	                <span class="text">Recent e-mails</span>
+	                <div class="actions">
+	                    <a href="#">
+	                        <span class="fa fa-refresh"></span>
+	                    </a>
+	                    <a href="#">
+	                        <span class="fa fa-cog"></span>
+	                    </a>
+	                    <a href="#">
+	                        <span class="fa fa-trash"></span>
+	                    </a>
+	                </div>
+	            </div>
+	            <div class="control-item-content">
+	                <section class="control-item-actions">
+	                    <a href="#" class="link">My e-mails</a>
+	                    <a href="#" class="mark">Mark visible as read</a>
+	                </section>
+	                <ul class="control-item-lists">
+	                    <li>
+	                        <a href="#">
+	                            <h6>Welcome to the Community!</h6>
+	                            <div>Hi, welcome to the my app...</div>
+	                            <div>
+	                                Message text
+	                            </div>
+	                        </a>
+	                        <a href="#" class="reply-all">Reply all</a>
+	                    </li>
+	                    <li>
+	                        <a href="#">
+	                            <h6>Welcome to the Community!</h6>
+	                            <div>Hi, welcome to the my app...</div>
+	                            <div>
+	                                Message text
+	                            </div>
+	                        </a>
+	                        <a href="#" class="reply-all">Reply all</a>
+	                    </li>
+	                    <li>
+	                        <a href="#">
+	                            <h6>Welcome to the Community!</h6>
+	                            <div>Hi, welcome to the my app...</div>
+	                            <div>
+	                                Message text
+	                            </div>
+	                        </a>
+	                        <a href="#" class="reply-all">Reply all</a>
+	                    </li>
+	                </ul>
+	            </div>
+	        </li>
+	        <li class="add">
+	            <div class="control-item-header">
+	                <a href="#" class="icon-toggle no-caret">
+	                    <span class="icon fa fa-plus"></span>
+	                </a>
+	            </div>
+	        </li>
+	    </ul>
+	    <a class="control-panel-toggle">
+	        <span class="fa fa-angle-double-left"></span>
+	    </a>
+	</div>
 
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Expose author name in posts
-                  <input type="checkbox" class="pull-right" checked>
-                </label>
-                <p>
-                  Allow the user to show his name in blog posts
-                </p>
-              </div><!-- /.form-group -->
 
-              <h3 class="control-sidebar-heading">Chat Settings</h3>
 
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Show me as online
-                  <input type="checkbox" class="pull-right" checked>
-                </label>
-              </div><!-- /.form-group -->
 
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Turn off notifications
-                  <input type="checkbox" class="pull-right">
-                </label>
-              </div><!-- /.form-group -->
 
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Delete chat history
-                  <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-                </label>
-              </div><!-- /.form-group -->
-            </form>
-          </div><!-- /.tab-pane -->
-        </div>
-      </aside><!-- /.control-sidebar -->
-      <!-- Add the sidebar's background. This div must be placed
-           immediately after the control sidebar -->
-      <div class="control-sidebar-bg"></div>
-    </div><!-- ./wrapper -->
 
-    <!-- jQuery 2.1.4 -->
-    <script src="{{URL::asset('admin/plugins/jQuery/jQuery-2.1.4.min.js')}}"></script>
-    
-    <!-- jQuery UI 1.11.4 -->
-    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-    <script>
-      $.widget.bridge('uibutton', $.ui.button);
-    </script>
-    <!-- Bootstrap 3.3.5 -->
-    <script src="{{URL::asset('admin/bootstrap/js/bootstrap.min.js')}}"></script> 
-    
-    <!-- Morris.js charts -->
-	<script src="{{URL::asset('admin/dist/js/raphael-min.js')}}"></script> 
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="{{URL::asset('admin/plugins/morris/morris.min.js')}}"></script>
-    
-    <!-- Sparkline -->
-    <script src="{{URL::asset('admin/plugins/sparkline/jquery.sparkline.min.js')}}"></script>
-    
-    <!-- jvectormap -->
-    <script src="{{URL::asset('admin/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
-    
-    <script src="{{URL::asset('admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
-    
-    <!-- jQuery Knob Chart -->
-    <script src="{{URL::asset('admin/plugins/knob/jquery.knob.js')}}"></script>
-    
-    <!-- daterangepicker -->
-	<script src="{{URL::asset('admin/dist/js/moment.min.js')}}"></script>
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
-    <script src="{{URL::asset('admin/plugins/daterangepicker/daterangepicker.js')}}"></script> 
-     
-    <!-- datepicker -->
-    <script src="{{URL::asset('admin/plugins/datepicker/bootstrap-datepicker.js')}}"></script> 
-    
-    <!-- Bootstrap WYSIHTML5 -->
-    <script src="{{URL::asset('admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}"></script> 
-    
-    <!-- Slimscroll -->
-    <script src="{{URL::asset('admin/plugins/slimScroll/jquery.slimscroll.min.js')}}"></script> 
-    
-    <!-- FastClick -->
-    <script src="{{URL::asset('admin/plugins/fastclick/fastclick.min.js')}}"></script>
-    
-    <!-- AdminLTE App -->
-    <script src="{{URL::asset('admin/dist/js/app.min.js')}}"></script>
-    
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{URL::asset('admin/dist/js/pages/dashboard.js')}}"></script>
-      
-    <!-- AdminLTE for demo purposes -->
-    <script src="{{URL::asset('admin/dist/js/demo.js')}}"></script>
-     
-  </body>
+
+	
+
+	<script src="{{URL::asset('admin/js/lib/jquery/jquery.min.js')}}"></script>
+	<script src="{{URL::asset('admin/js/lib/tether/tether.min.js')}}"></script>
+	<script src="{{URL::asset('admin/js/lib/bootstrap/bootstrap.min.js')}}"></script>
+	<script src="{{URL::asset('admin/js/plugins.js')}}"></script>
+
+	<script type="text/javascript" src="{{URL::asset('admin/js/lib/jqueryui/jquery-ui.min.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('admin/js/lib/lobipanel/lobipanel.min.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('admin/js/lib/match-height/jquery.matchHeight.min.js')}}"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.panel').lobiPanel({
+				sortable: true
+			});
+			$('.panel').on('dragged.lobiPanel', function(ev, lobiPanel){
+				$('.dahsboard-column').matchHeight();
+			});
+
+			google.charts.load('current', {'packages':['corechart']});
+			google.charts.setOnLoadCallback(drawChart);
+			function drawChart() {
+				var dataTable = new google.visualization.DataTable();
+				dataTable.addColumn('string', 'Day');
+				dataTable.addColumn('number', 'Values');
+				// A column for custom tooltip content
+				dataTable.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
+				dataTable.addRows([
+					['MON',  130, ' '],
+					['TUE',  130, '130'],
+					['WED',  180, '180'],
+					['THU',  175, '175'],
+					['FRI',  200, '200'],
+					['SAT',  170, '170'],
+					['SUN',  250, '250'],
+					['MON',  220, '220'],
+					['TUE',  220, ' ']
+				]);
+
+				var options = {
+					height: 314,
+					legend: 'none',
+					areaOpacity: 0.18,
+					axisTitlesPosition: 'out',
+					hAxis: {
+						title: '',
+						textStyle: {
+							color: '#fff',
+							fontName: 'Proxima Nova',
+							fontSize: 11,
+							bold: true,
+							italic: false
+						},
+						textPosition: 'out'
+					},
+					vAxis: {
+						minValue: 0,
+						textPosition: 'out',
+						textStyle: {
+							color: '#fff',
+							fontName: 'Proxima Nova',
+							fontSize: 11,
+							bold: true,
+							italic: false
+						},
+						baselineColor: '#16b4fc',
+						ticks: [0,25,50,75,100,125,150,175,200,225,250,275,300,325,350],
+						gridlines: {
+							color: '#1ba0fc',
+							count: 15
+						},
+					},
+					lineWidth: 2,
+					colors: ['#fff'],
+					curveType: 'function',
+					pointSize: 5,
+					pointShapeType: 'circle',
+					pointFillColor: '#f00',
+					backgroundColor: {
+						fill: '#008ffb',
+						strokeWidth: 0,
+					},
+					chartArea:{
+						left:0,
+						top:0,
+						width:'100%',
+						height:'100%'
+					},
+					fontSize: 11,
+					fontName: 'Proxima Nova',
+					tooltip: {
+						trigger: 'selection',
+						isHtml: true
+					}
+				};
+
+				var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+				chart.draw(dataTable, options);
+			}
+			$(window).resize(function(){
+				drawChart();
+				setTimeout(function(){
+				}, 1000);
+			});
+		});
+	</script>
+<script src="{{URL::asset('admin/js/app.js')}}"></script>
+</body>
 </html>
