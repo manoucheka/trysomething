@@ -39,6 +39,7 @@
 	            <div class="site-header-content-in">
 	                <div class="site-header-shown">
 	                    <div class="dropdown dropdown-notification notif">
+	                        <!--
 	                        <a href="#"
 	                           class="header-alarm dropdown-toggle active"
 	                           id="dd-notification"
@@ -47,6 +48,8 @@
 	                           aria-expanded="false">
 	                            <i class="font-icon-alarm"></i>
 	                        </a>
+	                        -->
+
 	                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
 	                            <div class="dropdown-menu-notif-header">
 	                                Notifications
@@ -58,7 +61,7 @@
 	                                        <img src="img/photo-64-1.jpg" alt="">
 	                                    </div>
 	                                    <div class="dot"></div>
-	                                    <a href="#">Morgan</a> was bothering about something
+	                                    <a href="#">Morgan essai</a> was bothering about something
 	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
 	                                </div>
 	                                <div class="dropdown-menu-notif-item">
@@ -91,6 +94,8 @@
 	                        </div>
 	                    </div>
 
+
+
 	                    
 	
 	                    <div class="dropdown user-menu">
@@ -114,6 +119,7 @@
 	                <div class="mobile-menu-right-overlay"></div>
 	                <div class="site-header-collapsed">
 	                    <div class="site-header-collapsed-in">
+	                        <!--
 	                        <div class="dropdown dropdown-typical">
 	                            <a class="dropdown-toggle" id="dd-header-sales" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	                                <span class="font-icon font-icon-wallet"></span>
@@ -121,19 +127,23 @@
 	                            </a>
 	
 	                            <div class="dropdown-menu" aria-labelledby="dd-header-sales">
-	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal test</a>
 	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
 	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
 	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
 	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
 	                            </div>
 	                        </div>
+	                        -->
 	                        <div class="dropdown dropdown-typical">
+	                            <!--
 	                            <a class="dropdown-toggle" id="dd-header-marketing" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	                                <span class="font-icon font-icon-cogwheel"></span>
 	                                <span class="lbl">Marketing automation</span>
 	                            </a>
+	                             -->
 	
+	                            <!--
 	                            <div class="dropdown-menu" aria-labelledby="dd-header-marketing">
 	                                <a class="dropdown-item" href="#">Current Search</a>
 	                                <a class="dropdown-item" href="#">Search for Issues</a>
@@ -168,7 +178,10 @@
 	                                <div class="dropdown-header">Timesheet</div>
 	                                <a class="dropdown-item" href="#">Subscribtions</a>
 	                            </div>
+                          -->
+
 	                        </div>
+	                        <!--
 	                        <div class="dropdown dropdown-typical">
 	                            <a class="dropdown-toggle" id="dd-header-social" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	                                <span class="font-icon font-icon-share"></span>
@@ -176,19 +189,24 @@
 	                            </a>
 	
 	                            <div class="dropdown-menu" aria-labelledby="dd-header-social">
-	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
+	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal test</a>
 	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
 	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
 	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
 	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
 	                            </div>
 	                        </div>
+	                        -->
+
+                           <!--
 	                        <div class="dropdown dropdown-typical">
 	                            <a href="#" class="dropdown-toggle no-arr">
 	                                <span class="font-icon font-icon-page"></span>
 	                                <span class="lbl">Projects</span>
 	                            </a>
 	                        </div>
+	                        -->
+            <!--
 	                        <div class="dropdown dropdown-typical">
 	                            <a class="dropdown-toggle" id="dd-header-form-builder" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	                                <span class="font-icon font-icon-pencil"></span>
@@ -203,9 +221,12 @@
 	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
 	                            </div>
 	                        </div>
+	                        -->
+	                        <!--
+
 	                        <div class="dropdown">
 	                            <button class="btn btn-rounded dropdown-toggle" id="dd-header-add" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                Add
+	                                Add test
 	                            </button>
 	                            <div class="dropdown-menu" aria-labelledby="dd-header-add">
 	                                <a class="dropdown-item" href="#">Quant and Verbal</a>
@@ -215,11 +236,12 @@
 	                                <a class="dropdown-item" href="#">Third Party Test</a>
 	                            </div>
 	                        </div>
+	                        -->
 	                        <div class="site-header-search-container">
 	                            <form class="site-header-search closed">
-	                                <input type="text" placeholder="Search"/>
+	                                <input type="text"  placeholder="Search"/>
 	                                <button type="submit">
-	                                    <span class="font-icon-search"></span>
+	                                    <span class="font-icon-search"> </span>
 	                                </button>
 	                                <div class="overlay"></div>
 	                            </form>
