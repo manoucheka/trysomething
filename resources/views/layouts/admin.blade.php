@@ -82,7 +82,7 @@
 	                                </div>
 	                                <div class="dropdown-menu-notif-item">
 	                                    <div class="photo">
-	                                        <img src="img/photo-64-4.jpg" alt="">
+	                                        <img src="{{Request::root().'/'}}default.png" alt="">
 	                                    </div>
 	                                    <a href="#">Lionely</a> wants to go to <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
 	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
@@ -100,14 +100,28 @@
 	
 	                    <div class="dropdown user-menu">
 	                        <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                            <img src="img/avatar-2-64.png" alt="">
+	                            <img src="{{Request::root().'/'}}default.png" alt="">
 	                        </button>
 	                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
-	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Profile</a>
+	                            <a class="dropdown-item" href="{{URL::to('/profile')}}"><span class="font-icon glyphicon glyphicon-user"></span>Profile essai</a>
 	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Settings</a>
 	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Help</a>
 	                            <div class="dropdown-divider"></div>
-	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Logout</a>
+	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out">
+                                              	<form action="/logout" method="POST" id="logout-form">
+                  {{csrf_field()}}
+                  <a href="#" onclick="document.getElementById('logout-form').submit()"> Logout</a>
+                  </form>
+	                            </span>
+                                    
+                           
+	                            	<!--Logout -->
+	              <!--	<form action="/logout" method="POST" id="logout-form">
+                  {{csrf_field()}}
+                  <a href="#" onclick="document.getElementById('logout-form').submit()"> Logout</a>
+                  </form>   -->
+
+	                            </a>
 	                        </div>
 	                    </div>
 	
@@ -136,6 +150,11 @@
 	                        </div>
 	                        -->
 	                        <div class="dropdown dropdown-typical">
+	                            <br>
+
+                                 <h4><a href="{{url('earnings')}}"> Dashboad</a></h4>
+
+
 	                            <!--
 	                            <a class="dropdown-toggle" id="dd-header-marketing" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	                                <span class="font-icon font-icon-cogwheel"></span>
@@ -206,37 +225,7 @@
 	                            </a>
 	                        </div>
 	                        -->
-            <!--
-	                        <div class="dropdown dropdown-typical">
-	                            <a class="dropdown-toggle" id="dd-header-form-builder" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                <span class="font-icon font-icon-pencil"></span>
-	                                <span class="lbl">Form builder</span>
-	                            </a>
-	
-	                            <div class="dropdown-menu" aria-labelledby="dd-header-form-builder">
-	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
-	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
-	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
-	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
-	                                <a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
-	                            </div>
-	                        </div>
-	                        -->
-	                        <!--
-
-	                        <div class="dropdown">
-	                            <button class="btn btn-rounded dropdown-toggle" id="dd-header-add" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                Add test
-	                            </button>
-	                            <div class="dropdown-menu" aria-labelledby="dd-header-add">
-	                                <a class="dropdown-item" href="#">Quant and Verbal</a>
-	                                <a class="dropdown-item" href="#">Real Gmat Test</a>
-	                                <a class="dropdown-item" href="#">Prep Official App</a>
-	                                <a class="dropdown-item" href="#">CATprer Test</a>
-	                                <a class="dropdown-item" href="#">Third Party Test</a>
-	                            </div>
-	                        </div>
-	                        -->
+ 
 	                        <div class="site-header-search-container">
 	                            <form class="site-header-search closed">
 	                                <input type="text"  placeholder="Search"/>
@@ -257,42 +246,44 @@
 	<nav class="side-menu">
 	    <div class="side-menu-avatar">
 	        <div class="avatar-preview avatar-preview-100">
-	            <img src="img/avatar-1-256.png" alt="">
+	            <img src="{{Request::root().'/'}}default.png" alt="">
 	        </div>
 	    </div>
 	    
 	    <ul class="side-menu-list">
 	        <li class="brown">
-	            <a href="#">
-	                <i class="font-icon font-icon-home"></i>
-	                <span class="lbl">Overview</span>
+	            <a href="{{ URL::to('admin/patients') }}">
+	                <i class="font-icon font-icon-users"></i>
+	                <span class="lbl">Patient Management</span>
 	            </a>
 	        </li>
 	        <li class="green">
-	            <a href="#">
+	            <a href="{{URL::to('admin/departments')}}">
 	                <i class="font-icon font-icon-cart"></i>
-	                <span class="lbl">Marketplace</span>
-	            </a>
-	        </li>
-	        <li class="gold opened">
-	            <a href="#">
-	                <i class="font-icon font-icon-speed"></i>
-	                <span class="lbl">Performance</span>
+	                <span class="lbl">Department Management</span>
 	            </a>
 	        </li>
 	        <li class="blue">
-	            <a href="#">
+	            <a href="{{ URL::to('admin/doctors') }}">
 	                <i class="font-icon font-icon-users"></i>
-	                <span class="lbl">Community</span>
+	                <span class="lbl">Doctor Management</span>
 	            </a>
 	        </li>
-	        <li class="purple with-sub">
+	        <li class="blue">
+	            <a href="{{ URL::to('admin/nurses')}}">
+	                <i class="font-icon font-icon-users"></i>
+	                <span class="lbl">Nurse Management</span>
+	            </a>
+	        </li>
+	        
+
+	      <!--  <li class="purple with-sub">
 	            <span>
 	                <i class="font-icon font-icon-comments active"></i>
 	                <span class="lbl">Messages</span>
 	            </span>
 	            <ul>
-	                <li><a href="#"><span class="lbl">Inbox</span><span class="label label-custom label-pill label-danger">4</span></a></li>
+	                <li><a href="{{ URL::to('admin/pharmacists')}}"><span class="lbl">Pharmacists Management</span><span class="label label-custom label-pill label-danger">4</span></a></li>
 	                <li><a href="#"><span class="lbl">Sent mail</span></a></li>
 	                <li><a href="#"><span class="lbl">Bin</span></a></li>
 	            </ul>
@@ -306,92 +297,73 @@
 	                <li><a href="#"><span class="lbl">Feedback</span></a></li>
 	                <li><a href="#"><span class="lbl">FAQ</span></a></li>
 	            </ul>
-	        </li>
+	        </li>   -->
+	        
 	        <li class="grey">
-	            <a href="#">
-	                <i class="font-icon font-icon-dashboard"></i>
-	                <span class="lbl">Dashboards</span>
+	            <a href="{{ URL::to('admin/pharmacists')}}">
+	                <i class="font-icon font-icon-users"></i>
+	                <span class="lbl">Pharmacists Management</span>
 	            </a>
 	        </li>
-	        <li class="red">
-	            <a href="#" class="label-right">
-	                <i class="font-icon font-icon-contacts"></i>
-	                <span class="lbl">Contacts</span>
-	                <span class="label label-custom label-pill label-danger">35</span>
-	            </a>
-	        </li>
+	       
+
+
 	        <li class="aquamarine">
-	            <a href="#">
-	                <i class="font-icon font-icon-build"></i>
-	                <span class="lbl">Companies</span>
+	            <a href="{{ URL::to('admin/laboratorists')}}">
+	                <i class="font-icon font-icon-users"></i>
+	                <span class="lbl">Laboratorists Management</span>
 	            </a>
 	        </li>
 	        <li class="magenta">
-	            <a href="#">
-	                <i class="font-icon font-icon-calend"></i>
-	                <span class="lbl">Calendar</span>
+	            <a href="{{URL::to('admin/accountants')}}">
+	               <i class="font-icon font-icon-users"></i>
+	                <span class="lbl">Accountants Management</span>
 	            </a>
 	        </li>
 	        <li class="blue-dirty">
-	            <a href="#">
-	                <i class="font-icon font-icon-edit"></i>
-	                <span class="lbl">Forms</span>
+	            <a href="{{URL::to('admin/receptionists')}}">
+	                <i class="font-icon font-icon-users"></i>
+	                <span class="lbl">Receptionists Management</span>
 	            </a>
 	        </li>
 	        <li class="coral">
 	            <a href="#">
 	                <i class="font-icon font-icon-chart"></i>
-	                <span class="lbl">Reports</span>
+	                <span class="lbl">Monitor Hospital</span>
 	            </a>
 	        </li>
 	        <li class="pink-red">
 	            <a href="#">
 	                <i class="font-icon font-icon-zigzag"></i>
-	                <span class="lbl">Activity</span>
+	                <span class="lbl">Payroll</span>
 	            </a>
 	        </li>
-	        <li class="gold">
-	            <a href="#">
-	                <i class="font-icon font-icon-tablet"></i>
-	                <span class="lbl">Tables</span>
-	            </a>
-	        </li>
-	        <li class="magenta">
-	            <a href="#">
-	                <i class="font-icon font-icon-widget"></i>
-	                <span class="lbl">Widges</span>
-	            </a>
-	        </li>
-	        <li class="pink">
-	            <a href="#">
-	                <i class="font-icon font-icon-map"></i>
-	                <span class="lbl">Maps</span>
-	            </a>
-	        </li>
+	        
+
+	        
+	        <!--
 	        <li class="blue-darker">
 	            <a href="#">
 	                <i class="font-icon font-icon-chart-2"></i>
 	                <span class="lbl">Charts</span>
 	            </a>
 	        </li>
+	        -->
 	        <li class="grey">
 	            <a href="#">
 	                <i class="font-icon font-icon-doc"></i>
 	                <span class="lbl">Documentation</span>
 	            </a>
 	        </li>
-	        <li class="blue-sky">
-	            <a href="#">
-	                <i class="font-icon font-icon-question"></i>
-	                <span class="lbl">Help</span>
-	            </a>
-	        </li>
+	        
+	        
 	        <li class="coral">
 	            <a href="#">
 	                <i class="font-icon font-icon-cogwheel"></i>
 	                <span class="lbl">Settings</span>
 	            </a>
 	        </li>
+	        <!--
 	        <li class="magenta">
 	            <a href="#">
 	                <i class="font-icon font-icon-user"></i>
@@ -404,12 +376,15 @@
 	                <span class="lbl">Tasks</span>
 	            </a>
 	        </li>
+	    -->
 	        <li class="aquamarine">
 	            <a href="#">
 	                <i class="font-icon font-icon-mail"></i>
 	                <span class="lbl">Contact form</span>
 	            </a>
 	        </li>
+	        
+        <!--
 	        <li class="pink">
 	            <a href="#">
 	                <i class="font-icon font-icon-users-group"></i>
@@ -434,6 +409,8 @@
 	                <span class="lbl">Project</span>
 	            </a>
 	        </li>
+
+	    -->
 	    </ul>
 	</nav><!--.side-menu-->
 
@@ -563,5 +540,8 @@
 	</script>
 
 <script src="{{URL::asset('admin/js/app.js')}}"></script>
+<script src="{{URL::asset('admin/bootstrap/js/boot1.js')}}"></script>
+<script src="{{URL::asset('admin/bootstrap/js/boot2.js')}}"></script>
+<script src="{{URL::asset('admin/bootstrap/js/boot3.js')}}"></script>
 </body>
 </html>

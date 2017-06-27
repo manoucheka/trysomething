@@ -1,6 +1,22 @@
 @extends('layouts.admin')
 @section('page')
 
+          <header class="section-header">
+        <div class="tbl">
+          <div class="tbl-row">
+            <div class="tbl-cell">
+              <!--<h3>Patients Admin Panel</h3>-->
+                        
+              <ol class="breadcrumb breadcrumb-simple">
+                
+                <!--<li><a href="{{url('patients/create')}}">Create</a></li> -->
+                <li><a href="{{url('admin/index')}}">Return to Dashbroad</a></li>
+                
+              </ol>
+            </div>
+          </div>
+        </div>
+      </header>
 
       <section class="card">
         <header class="card-header card-header-lg">

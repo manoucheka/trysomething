@@ -14,6 +14,13 @@
    <div class="panel-body">
      <form action="/login" method="POST">
      {{ csrf_field() }}
+
+      @if(session('error'))
+<div class="alert alert-danger">
+
+   {{ session('error') }}
+</div>
+  @endif
      <div class="form-group">
       <div class="input-group">
        <span class="input-group-addon"> <i class="fa fa-envelope"></i></span>

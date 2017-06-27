@@ -11,7 +11,7 @@
               <ol class="breadcrumb breadcrumb-simple">
                 <li><a href="{{ url('admin/patients')}}">View All Patients</a></li>
                 <!--<li><a href="{{url('patients/create')}}">Create</a></li> -->
-                <li><a href="{{url('admin/index')}}">Return to Dashbroad</a></li>
+                
                 <li class="active">Create</li>
               </ol>
             </div>

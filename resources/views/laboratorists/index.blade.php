@@ -1,0 +1,1 @@
+C:\laragon\www\hopital\app/views/patients/index.blade.php

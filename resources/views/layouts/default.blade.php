@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>AHI - Association Haitienne des Internautes</title>
+<title>HPC - Hopital Pharmacy Clinic</title>
 <meta name="keywords" content="HTML5 Theme" />
 <meta name="description" content="Ark - Responsive Multi-Purpose Template">
 <meta name="author" content="prothemes.net">
@@ -220,7 +220,7 @@
                             <!-- Home -->
                             <li class="nav-item dropdown">
                                 <a class="nav-item-child dropdown-toggle radius-3 active" href="javascript:void(0);" data-toggle="dropdown">
-                                    Home
+                                    Home test
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- Default -->
@@ -304,382 +304,45 @@
                                     <!-- End Shopify -->
                                 </ul>
                             </li>
+
                             <!-- End Home -->
 
-                            <!-- Pages -->
-                            <li class="nav-item dropdown mega-menu-fullwidth">
-                                <a class="nav-item-child dropdown-toggle radius-3" href="javascript:void(0);" data-toggle="dropdown">
-                                    Pages
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="mega-menu-content">
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <!-- About Pages -->
-                                                <ul class="list-unstyled mega-menu-list">
-                                                    <li><span class="mega-menu-title">About Pages</span></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_about_us.html">About Us</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_about_us_classic.html">About Us Classic</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_about_us_modern.html">About Us Modern</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_about_us_creative.html">About Us Creative</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_about_me.html">About Me</a></li>
-                                                </ul>
-                                                <!-- End About Pages -->
-                                            </div>
-                                            <div class="col-md-3">
-                                                <!-- Business Pages -->
-                                                <ul class="list-unstyled mega-menu-list">
-                                                    <li><span class="mega-menu-title">Business Pages</span></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_services.html">Services</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_services_classic.html">Services Classic</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_services_creative.html">Services Creative</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_services_modern.html">Services Modern</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_team_members.html">Team Members</a></li>
-                                                </ul>
-                                                <!-- End Business Pages -->
-                                            </div>
-                                            <div class="col-md-3">
-                                                <!-- Utility Pages -->
-                                                <ul class="list-unstyled mega-menu-list">
-                                                    <li><span class="mega-menu-title">Utility Pages</span></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_contacts.html">Contacts</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_contacts_classic.html">Contacts Classic</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_faq.html">Faq</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_faq_modern.html">Faq Modern</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_error_404.html">Error 404</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_coming_soon.html">Coming Soon</a></li>
-                                                </ul>
-                                                <!-- End Utility Pages -->
-                                            </div>
-                                            <div class="col-md-3">
-                                                <!-- Login Pages -->
-                                                <ul class="list-unstyled mega-menu-list">
-                                                    <li><span class="mega-menu-title">Login Pages</span></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_login.html">Default</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_login_bg_slider_image.html">Background Slider Image</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_login_bg_static_image.html">Static Image</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_login_bg_html5_video.html">HTML5 Video</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="page_login_bg_parallax_image.html">Background Parallax Image</a></li>
-                                                </ul>
-                                                <!-- End Login Pages -->
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- End Pages -->
+                            
 
-                            <!-- Features -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-item-child dropdown-toggle radius-3" href="javascript:void(0);" data-toggle="dropdown">
-                                    Features
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu">
-                                        <!-- Header -->
-                                        <span class="dropdown-submenu-child">Header</span>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_header.html">Header</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_header_fixed.html">Header Fixed</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_header_transparent.html">Header Transparent</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_header_transparent_with_login.html">Header Transparent with Login</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_header_center_aligned.html">Header Center Aligned</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_header_center_aligned_transparent.html">Header Center Aligned Transparent</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_header_vertical_left.html">Header Vertical Left</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_header_vertical_right.html">Header Vertical Right</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_header_section_scroll_left.html">Header Section Scroll Left</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_header_section_scroll_right.html">Header Section Scroll Right</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_header_fullscreen.html">Header Fullscreen</a></li>
-                                        </ul>
-                                        <!-- End Header -->
-                                    </li>
-                                    
-                                    <li class="dropdown-submenu">
-                                        <!-- Header Search -->
-                                        <span class="dropdown-submenu-child">Header Search</span>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_search.html">Search Default</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_search_classic.html">Search Classic</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_search_fullscreen.html">Search Fullscreen</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_search_on_header.html">Search On Header</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_search_push.html">Search Push</a></li>
-                                        </ul>
-                                        <!-- End Header Search -->
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <!-- Topbar -->
-                                        <span class="dropdown-submenu-child">Topbar</span>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_topbar_classic.html">Topbar Classic</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_topbar_ecommerce.html">Topbar E-commerce</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_topbar_transparent.html">Topbar Transparent</a></li>
-                                        </ul>
-                                        <!-- End Topbar -->
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <!-- Footer -->
-                                        <span class="dropdown-submenu-child">Footer</span>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_footer.html#footer">Footer</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_footer_v2.html#footer">Footer Layout 2</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_footer_v3.html#footer">Footer Layout 3</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_footer_v4.html#footer">Footer Layout 4</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_footer_v5.html#footer">Footer Layout 5</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_footer_v6.html#footer">Footer Layout 6</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_footer_v7.html#footer">Footer Layout 7</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="features_footer_v8.html#footer">Footer Layout 8</a></li>
-                                        </ul>
-                                        <!-- End Footer -->
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- End Features -->
 
-                            <!-- Portfolio -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-item-child dropdown-toggle radius-3" href="javascript:void(0);" data-toggle="dropdown">
-                                    Portfolio
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-submenu">
-                                        <!-- Grid -->
-                                        <span class="dropdown-submenu-child">Grid</span>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_2_col_grid.html">2 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_3_col_grid.html">3 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_4_col_grid.html">4 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_5_col_grid.html">5 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_6_col_grid.html">6 Columns</a></li>
-                                        </ul>
-                                        <!-- End Grid -->
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <!-- Fullwidth -->
-                                        <span class="dropdown-submenu-child">Fullwidth</span>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_2_col_fullwidth.html">2 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_3_col_fullwidth.html">3 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_4_col_fullwidth.html">4 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_5_col_fullwidth.html">5 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_6_col_fullwidth.html">6 Columns</a></li>
-                                        </ul>
-                                        <!-- End Fullwidth -->
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <!-- Slider Grid -->
-                                        <span class="dropdown-submenu-child">Slider Grid</span>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_slider_2_col_grid.html">2 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_slider_3_col_grid.html">3 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_slider_4_col_grid.html">4 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_slider_5_col_grid.html">5 Columns</a></li>
-                                        </ul>
-                                        <!-- End Slider Grid -->
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <!-- Slider Fullwidth -->
-                                        <span class="dropdown-submenu-child">Slider Fullwidth</span>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_slider_2_col_fullwidth.html">2 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_slider_3_col_fullwidth.html">3 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_slider_4_col_fullwidth.html">4 Columns</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_slider_5_col_fullwidth.html">5 Columns</a></li>
-                                        </ul>
-                                        <!-- End Slider Fullwidth -->
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <!-- Masonry -->
-                                        <span class="dropdown-submenu-child">Masonry</span>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_masonry_grid.html">Masonry Grid</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_masonry_fullwidth.html">Masonry Fullwidth</a></li>
-                                        </ul>
-                                        <!-- End Masonry -->
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <!-- Load More -->
-                                        <span class="dropdown-submenu-child">Load More</span>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_load_more_button.html">Load More Button</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_load_more_infinite_scrolling.html">Load More Infinite Scrolling</a></li>
-                                        </ul>
-                                        <!-- End Load More -->
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <!-- Hover Effects -->
-                                        <span class="dropdown-submenu-child">Hover Effects</span>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_hover_effects_v1.html">Hover Effects v1</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_hover_effects_v2.html">Hover Effects v2</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_hover_effects_v3.html">Hover Effects v3</a></li>
-                                        </ul>
-                                        <!-- End Hover Effects -->
-                                    </li>
-                                    <li class="dropdown-submenu">
-                                        <!-- Single Post -->
-                                        <span class="dropdown-submenu-child">Single Post</span>
-                                        <ul class="dropdown-menu">
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_single_item.html">Single Item</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_single_slider.html">Slider</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_single_video_youtube.html">Video Youtube</a></li>
-                                            <li class="dropdown-menu-item"><a class="dropdown-menu-item-child" href="portfolio_single_video_vimeo.html">Video Vimeo</a></li>
-                                        </ul>
-                                        <!-- End Single Post -->
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- End Portfolio -->
 
-                            <!-- Shortcodes -->
-                            <li class="nav-item dropdown mega-menu-fullwidth">
-                                <a class="nav-item-child dropdown-toggle radius-3" href="javascript:void(0);" data-toggle="dropdown">
-                                    Shortcodes
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="mega-menu-content">
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <!-- Typography -->
-                                                <ul class="list-unstyled mega-menu-list">
-                                                    <li><span class="mega-menu-title">Typography/Misc.</span></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_typography.html">Typography</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_headings.html">Headings</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_dropcaps.html">Dropcaps</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_blockquotes.html">Blockquotes</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_alerts.html">Alerts</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_dividers.html">Dividers</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_breadcrumbs.html">Breadcrumbs</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_accordion.html">Accordion</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_tables.html">Tables</a></li>
-                                                </ul>
-                                                <!-- End Typography -->
-                                            </div>
-                                            <div class="col-md-3">
-                                                <!-- Common Elements -->
-                                                <ul class="list-unstyled mega-menu-list">
-                                                    <li><span class="mega-menu-title">Common Elements</span></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_buttons.html">Buttons</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_theme_icons.html">Theme Icons</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_icon_list.html">Icon List</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_testimonials.html">Testimonials</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_call_to_action.html">Call To Action</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_image_gallery.html">Image Gallery</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_timeline.html">Timeline</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_clients.html">Clients</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_tab.html">Tab</a></li>
-                                                </ul>
-                                                <!-- End Common Elements -->
-                                            </div>
-                                            <div class="col-md-3">
-                                                <!-- Interactive Elements -->
-                                                <ul class="list-unstyled mega-menu-list">
-                                                    <li><span class="mega-menu-title">Interactive Elements</span></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_icon_box.html">Icon Box</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_interactive_banner.html">Interactive Banner</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_parallax.html">Parallax</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_services.html">Services</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_slider_block.html">Slider Block</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_pricing_list.html">Pricing List</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_newsletter.html">Newsletter</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_news.html">News</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_work.html">Work</a></li>
-                                                </ul>
-                                                <!-- End Interactive Elements -->
-                                            </div>
-                                            <div class="col-md-3">
-                                                <!-- Infographics -->
-                                                <ul class="list-unstyled mega-menu-list">
-                                                    <li><span class="mega-menu-title">Infographics</span></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_animations.html">Animations</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_process.html">Process</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_counters.html">Counters</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_piecharts.html">Piecharts</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_vertical_progress_bar.html">Vertical Progress Bar</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_horizontal_progress_bar.html">Horizontal Progress Bar</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_video.html">Video</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="shortcodes_google_map.html">Google Map</a></li>
-                                                </ul>
-                                                <!-- End Infographics -->
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- End Shortcodes -->
+                  
 
-                            <!-- Blog -->
-                            <li class="nav-item dropdown mega-menu-fullwidth">
-                                <a class="nav-item-child dropdown-toggle radius-3" href="javascript:void(0);" data-toggle="dropdown">
-                                    Blog
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="mega-menu-content">
-                                        <div class="row">
-                                            <div class="col-md-3">
-                                                <!-- Grid -->
-                                                <ul class="list-unstyled mega-menu-list">
-                                                    <li><span class="mega-menu-title">Grid</span></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_grid_2_col.html">2 Columns</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_grid_3_col.html">3 Columns</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_grid_4_col.html">4 Columns</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_grid_fullwidth.html">Fullwidth</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_grid_left_sidebar.html">Left Sidebar</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_grid_right_sidebar.html">Right Sidebar</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_grid_both_sidebar.html">Both Sidebar</a></li>
-                                                </ul>
-                                                <!-- End Grid -->
-                                            </div>
-                                            <div class="col-md-3">
-                                                <!-- Classic -->
-                                                <ul class="list-unstyled mega-menu-list">
-                                                    <li><span class="mega-menu-title">Classic</span></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_classic_2_col.html">2 Columns</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_classic_3_col.html">3 Columns</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_classic_4_col.html">4 Columns</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_classic_fullwidth.html">Fullwidth</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_classic_left_sidebar.html">Left Sidebar</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_classic_right_sidebar.html">Right Sidebar</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_classic_both_sidebar.html">Both Sidebar</a></li>
-                                                </ul>
-                                                <!-- End Classic -->
-                                            </div>
-                                            <div class="col-md-3">
-                                                <!-- Teaser -->
-                                                <ul class="list-unstyled mega-menu-list">
-                                                    <li><span class="mega-menu-title">Teaser</span></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_teaser_2_col.html">2 Columns</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_teaser_3_col.html">3 Columns</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_teaser_4_col.html">4 Columns</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_teaser_fullwidth.html">Fullwidth</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_teaser_left_sidebar.html">Left Sidebar</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_teaser_right_sidebar.html">Right Sidebar</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_teaser_both_sidebar.html">Both Sidebar</a></li>
-                                                </ul>
-                                                <!-- End Teaser -->
-                                            </div>
-                                            <div class="col-md-3">
-                                                <!-- Single Post-->
-                                                <ul class="list-unstyled mega-menu-list">
-                                                    <li><span class="mega-menu-title">Single Post</span></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_single_post_standard.html">Standard</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_single_post_slider.html">Slider</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_single_post_vimeo_video.html">Vimeo Video</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_single_post_youtube_video.html">Youtube Video</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_single_post_audio.html">Audio</a></li>
-                                                    <li class="mega-menu-item"><a class="mega-menu-child" href="blog_single_post_quote.html">Quote</a></li>
-                                                </ul>
-                                                <!-- End Single Post-->
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- End Blog -->
+ 
+                  
+
+
+
+                            
+                              <ul class="nav nav-pills pull-right">
+                          @if(Sentinel::check())
+                          <li role="presentation">
+                  <form action="/logout" method="POST" id="logout-form">
+                  {{csrf_field()}}
+                  <a href="#" onclick="document.getElementById('logout-form').submit()"> Logout</a>
+                  </form>
+                 </li>
+                   <h3 class="text-muted"> 
+                      
+
+                 @else
+
+                 <li role="presentation"><a href="/login">Login</a></li>
+                 <li role="presentation"><a href="/register">Register</a></li> 
+                 @endif
+
+            </ul>
 
                             <!-- Login -->
                             <li class="nav-item nav-item-bg form-modal-nav radius-3">
                                <!-- <a class="nav-item-child form-modal-login radius-3" href="javascript:void(0);">Login</a> -->
-                              <a href="/login">Login</a>
+                              
+
                             </li>
                             <!-- End Login -->
                         </ul>
@@ -688,7 +351,21 @@
                 <!-- End Navbar Collapse -->
             </div>
             <!--// End Container-->
+
+            
+            
         </nav>
+
+        <p>
+        <h2 class="text-muted"> 
+          @if(Sentinel::check()) 
+          Hello, {{Sentinel::getUser()->first_name}}- {{Sentinel::getUser()->last_name}}
+          @else
+            Authentication with Sentinel
+          @endif 
+        </h2>
+    </p>
+
         <!-- Navbar -->
     </header>
     <!--========== END HEADER TRANSPARENT ==========-->

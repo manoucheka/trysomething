@@ -174,7 +174,7 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
-
+       
 
             
 

@@ -3,6 +3,6 @@
 @section('content')
 <br>
 <br>
-index fichier 
+<center>index </center>
 
 @stop
